@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  lemp-mariadb:
+    build: .
+    restart: always
+    ports:
+      - 8081:80
+    volumes:
+      - ./app:/var/www/example
+    hostname: lemp-mariadb
